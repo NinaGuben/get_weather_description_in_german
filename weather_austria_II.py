@@ -5,6 +5,7 @@ import pandas as pd
 api_key= "756d48fd3afee318c539d68224c06f23"
 url = "https://openweathermap.org/"
 
+stadt = input("Von welcher österreichischen Stadt möchtest du die Wetterlage wissen? \n")
 
 def aktuelles_wetter(stadt):
     url = "https://api.openweathermap.org/data/2.5/weather"
@@ -24,7 +25,4 @@ def aktuelles_wetter(stadt):
     else:
         print("API is not accessible")
 
-  #  print(data)
-
-
-aktuelles_wetter("Wien")
+aktuelles_wetter(stadt)
