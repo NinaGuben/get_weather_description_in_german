@@ -1,14 +1,11 @@
 import requests
 import pandas as pd
 
-
-api_key= "756d48fd3afee318c539d68224c06f23"
-url = "https://openweathermap.org/"
-
 stadt = input("Von welcher österreichischen Stadt möchtest du die Wetterlage wissen? \n")
 
 def aktuelles_wetter(stadt):
     url = "https://api.openweathermap.org/data/2.5/weather"
+    api_key = "756d48fd3afee318c539d68224c06f23"
     params = {'appid': api_key,'q': stadt, 'units': 'metric','lang': 'de' }
     response = requests.get(url, params = params)
     if response.status_code == 200:
